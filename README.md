@@ -1,95 +1,70 @@
-# react-element-cloner
+# Getting Started with Create React App
 
-Read `notes.md` for help!
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-fork this repo and create a react app in this directory 
+## Available Scripts
 
-`yarn create react-app .` or `npx create-react-app .`
+In the project directory, you can run:
 
-Ask Doug for a hint if you want one!
+### `npm start`
 
-## Task 1
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Create these components:
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-```jsx
-<Breakfast>
-  <Food foodName="toast" />
-  <Food foodName="mushrooms" />
-</Breakfast>
-```
+### `npm test`
 
-`Food` displays the `foodName` string passed to it
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-`Breakfast` - passes a `foodName` prop to each of its children - changing each to be `"coffee"`
+### `npm run build`
 
-## Task 2
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Allow `BreakFast` to take an `overwrite` prop
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-```jsx
-<Breakfast overwrite="vegan sausages">
-  <Food foodName="hash browns" />
-</Breakfast>
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-If `overwrite` is passed, all `foodName` props are overwritten to be this prop. 
+### `npm run eject`
 
-If it is not passed then do not overwrite the `foodName` props.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-## Task 3
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Create a `ToggleInputs` component that displays a `button` which, when clicked, toggles whether or not `ToggleInput`s children (`input`/`button`/`select`/etc...) are `disabled`.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-```jsx
-<ToggleInputs>
-  <input type="text" placeholder="tell me a joke!" />
-  <select name="type" id="joke-type">
-    <option>funny</option>
-    <option>hilarious</option>
-  </select>
-</ToggleInputs>
-```
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Task 4 [advanced]
+## Learn More
 
-Create a `Spy` component which wraps an `input` element. 
-When the `onChange` event of the `input` is triggered the `Spy` component will `console.log()` the value **before** inputs `onChange` function is invoked. The functionality of the `input` must be unchanged.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-```jsx
-<Spy>
-  <input type="text" onChange={(e) => setInput(e.target.value)} />
-</Spy>
-```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
+### Code Splitting
 
-## Task 5 [very advanced]
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-Create a `DeepRename` component that takes a `message` prop. This component overwrites any text with this message **no matter how deeply nested in the component tree**
+### Analyzing the Bundle Size
 
-```jsx
-<DeepRename message="gotcha!">
-  <div>
-    <div>
-     <div>
-       <p>change me!</p>
-     </div>
-    </div>
-  </div>
-</DeepRename>
-```
-hint: `change me!` is a child of the `<p>` tag and it's data type is a `string`! For this challenge assume this string has no siblings
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-tip: practice replacing `change me!` in a non-nested `p` tag before trying to solve it with nesting
+### Making a Progressive Web App
 
-## Extras - add your own ideas below and put in a pull request!
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-## MovieList
+### Advanced Configuration
 
-Create a `MovieList` component which renders `Movie` components from an array. `Movie`s **only** functionality is to display the movie name. `MovieList` adds functionality to select a movie - the selected movie will have it's background highlighted
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-```jsx
-<MovieList>
-  {movies.map(movie => <Movie movie={movie}/>)}
-</MovieList>
-```
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
