@@ -3,18 +3,18 @@ import { useState } from 'react';
 
 export default function ToggleInputs({ children }) {
   let clonedChildren;
-  const [areEnabled, setAreEnabled] = useState(true);
+  const [isDisabled, setIsDisabled] = useState(false);
   const childrenArr = React.Children.toArray(children);
   clonedChildren = childrenArr.map((child) => {
-    return cloneElement(child, { disabled: true });
+    return cloneElement(child, { disabled: isDisabled });
   });
 
   return (
     <div>
-      {areEnabled ? children : clonedChildren}
+      {clonedChildren}
       <button
         onClick={() => {
-          setAreEnabled(!areEnabled);
+          setIsDisabled(!isDisabled);
         }}
       >
         disable

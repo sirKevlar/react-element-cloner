@@ -6,16 +6,16 @@ import ToggleInputs from './components/ToggleInputs';
 function App() {
   return (
     <div className='App'>
-      <Breakfast>
+      <Breakfast overwrite='coffee'>
         <Food foodName='toast' />
         <Food foodName='mushrooms' />
       </Breakfast>
       <input type='text' placeholder='tell me a joke!' />
       <ToggleInputs>
-      <select name='type' id='joke-type'>
-        <option>funny</option>
-        <option>hilarious</option>
-      </select>
+        <select name='type' id='joke-type'>
+          <option>funny</option>
+          <option>hilarious</option>
+        </select>
       </ToggleInputs>
     </div>
   );
