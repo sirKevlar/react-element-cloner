@@ -1,5 +1,6 @@
 import './App.css';
 import Breakfast from './components/Breakfast';
+import DeepRename from './components/DeepRename';
 import Food from './components/Food';
 import Spy from './components/Spy';
 import ToggleInputs from './components/ToggleInputs';
@@ -19,12 +20,17 @@ function App() {
         </select>
       </ToggleInputs>
       <Spy>
-      <input
-      type='text'
-      placeholder='Check the log'
-      onChange={(e) => console.log(e.target.value, 'INPUT LOG <<<---')}
-    />
+        <input
+          type='text'
+          placeholder='Check the log'
+          onChange={(e) => console.log(e.target.value, 'INPUT LOG <<<---')}
+        />
       </Spy>
+      <DeepRename>
+        <div>
+          <p>change me!</p>
+        </div>
+      </DeepRename>
     </div>
   );
 }
