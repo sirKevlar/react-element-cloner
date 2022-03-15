@@ -1,6 +1,7 @@
 import './App.css';
 import Breakfast from './components/Breakfast';
 import Food from './components/Food';
+import Spy from './components/Spy';
 import ToggleInputs from './components/ToggleInputs';
 
 function App() {
@@ -17,6 +18,13 @@ function App() {
           <option>hilarious</option>
         </select>
       </ToggleInputs>
+      <Spy>
+      <input
+      type='text'
+      placeholder='Check the log'
+      onChange={(e) => console.log(e.target.value, 'INPUT LOG <<<---')}
+    />
+      </Spy>
     </div>
   );
 }

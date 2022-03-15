@@ -5,10 +5,7 @@ export default function Breakfast({ children, overwrite }) {
   const childrenArr = React.Children.toArray(children);
 
   clonedChildren = childrenArr.map((child) => {
-    console.log(child);
-    return overwrite
-      ? cloneElement(child, { foodName: overwrite })
-      : child;
+    return overwrite ? cloneElement(child, { foodName: overwrite }) : child;
   });
 
   return <div>{clonedChildren}</div>;
